@@ -1,0 +1,172 @@
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #101418;
+  color: #f3f6f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#viewport {
+  position: relative;
+  min-width: 0;
+  background:
+    radial-gradient(circle at 22% 14%, rgba(115, 153, 180, 0.18), transparent 34%),
+    linear-gradient(135deg, #121820, #171d22 46%, #101418);
+}
+
+#panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px;
+  overflow: auto;
+  background: #1c242a;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #8fc7ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.meta,
+figcaption,
+.info p {
+  color: #bdc8d1;
+  line-height: 1.45;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button,
+.check {
+  min-height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  background: #2b343c;
+  color: #f3f6f8;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background: #35414b;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.metrics {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.metrics div {
+  padding: 10px 12px;
+  border-left: 3px solid #64b5f6;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+dt {
+  color: #9aa9b4;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+dd {
+  margin: 3px 0 0;
+}
+
+.info {
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.label {
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: rgba(11, 15, 18, 0.86);
+  border: 1px solid rgba(163, 200, 226, 0.35);
+  color: #f5f8fb;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 860px) {
+  body {
+    overflow: auto;
+  }
+
+  #app {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  #viewport {
+    height: 64vh;
+  }
+
+  #panel {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MgSO4 Plant 3D Simulation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="viewport" aria-label="Interactive 3D magnesium sulfate plant simulation"></section>
+    <aside id="panel">
+      <div class="panel-header">
+        <p class="eyebrow">MgSO4.7H2O Plant</p>
+        <h1>Stacked Vertical Plant Simulation</h1>
+        <p class="meta">Near Riyadh | 20 m x 15 m footprint | 8 m high stacked process train</p>
+      </div>
+
+      <div class="controls">
+        <button id="toggleFlow" type="button">Pause Flow</button>
+        <button id="resetCamera" type="button">Reset View</button>
+        <button id="toggleItems" type="button">Hide Items</button>
+        <label class="check">
+          <input id="toggleMezzanine" type="checkbox" />
+          <span>Mezzanine</span>
+        </label>
+        <label class="check">
+          <input id="toggleLabels" type="checkbox" checked />
+          <span>Labels</span>
+        </label>
+      </div>
+
+      <dl class="metrics">
+        <div><dt>Production</dt><dd>8 t/day operating, 2,112 t/year</dd></div>
+        <div><dt>Route</dt><dd>MgO + 30% H2SO4</dd></div>
+        <div><dt>Area</dt><dd>300 m2 + 80 m2 mezzanine</dd></div>
+        <div><dt>Operation</dt><dd>8 h/day, 300 days/year, 88% efficiency</dd></div>
+      </dl>
+
+      <div class="info">
+        <h2 id="equipmentName">Select Equipment</h2>
+        <p id="equipmentBody">Click any highlighted unit in the 3D scene to inspect its workbook-derived role, capacity, and area.</p>
+      </div>
+
+      <figure>
+        <img src="./assets/mgso4_vertical_concept.png" alt="Generated vertical concept render of the MgSO4 plant" />
+        <figcaption>Generated realistic vertical concept image used as visual reference.</figcaption>
+      </figure>
+    </aside>
+  </main>
+
+  <script src="./dist/plant-simulation.bundle.js"></script>
+</body>
+</html>
